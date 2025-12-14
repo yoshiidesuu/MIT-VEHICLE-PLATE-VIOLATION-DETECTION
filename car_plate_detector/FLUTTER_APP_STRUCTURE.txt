@@ -1,0 +1,179 @@
+✅ FLUTTER APP STRUCTURE - car_plate_detector
+
+📱 APP FEATURES
+═══════════════════════════════════════════════════════════════════
+
+1. LANDING SCREEN (First page user sees)
+   ├─ Capture & Scan (Camera/Gallery)
+   ├─ Manual Input (Type plate number)
+   └─ Scan Logs (View scanning history)
+
+2. CAPTURE & SCAN SCREEN
+   ├─ Take photo with camera
+   ├─ Choose from gallery
+   └─ Upload to API for detection
+
+3. MANUAL INPUT SCREEN
+   ├─ Type license plate number
+   ├─ Check against database
+   └─ View violations instantly
+
+4. SCAN LOGS SCREEN
+   ├─ View all previous scans
+   ├─ Statistics (total scans, violations, etc.)
+   ├─ Delete individual logs
+   └─ Clear all logs
+
+5. RESULTS SCREEN (Shared for all inputs)
+   ├─ Display detected/entered plate
+   ├─ Show confidence scores
+   ├─ Display violations with details
+   ├─ Show owner information
+   ├─ Display cropped plate image
+   └─ Auto-save to scan logs
+
+═══════════════════════════════════════════════════════════════════
+
+📁 PROJECT STRUCTURE
+═══════════════════════════════════════════════════════════════════
+
+car_plate_detector/
+├── lib/
+│   ├── main.dart (Entry point → Landing Screen)
+│   ├── services/
+│   │   └── api_service.dart (API communication with backend)
+│   └── screens/
+│       ├── landing_screen.dart (Main menu with 3 options)
+│       ├── home_screen.dart (Camera & Gallery capture)
+│       ├── manual_input_screen.dart (Manual plate entry)
+│       ├── logs_screen.dart (Scan history & statistics)
+│       └── results_screen.dart (Display detection results)
+├── pubspec.yaml (Dependencies)
+└── android/, ios/ (Platform-specific code)
+
+═══════════════════════════════════════════════════════════════════
+
+🔧 DEPENDENCIES ADDED
+═══════════════════════════════════════════════════════════════════
+
+- image_picker: 1.0.0 → Pick images from camera/gallery
+- camera: 0.10.0 → Camera functionality
+- http: 1.1.0 → HTTP requests
+- dio: 5.3.0 → HTTP client (main)
+- intl: 0.19.0 → Date/time formatting
+- shared_preferences: 2.2.0 → Local storage for scan logs
+
+═══════════════════════════════════════════════════════════════════
+
+⚙️ API INTEGRATION
+═══════════════════════════════════════════════════════════════════
+
+Backend URL: http://localhost:8000
+
+Endpoints Used:
+1. POST /detect-plates
+   - Upload image for plate detection
+   - Returns plate number, violations, owner info
+
+2. GET /violations/check/{plate_number}
+   - Check violations for manual input
+   - Manual input screen uses this
+
+3. GET /vehicles/info/{plate_number}
+   - Get owner information
+   - Used in results display
+
+4. GET /cropped-plate/{filename}
+   - View cropped plate images
+   - Results screen displays this
+
+═══════════════════════════════════════════════════════════════════
+
+🎯 DATA FLOW
+═══════════════════════════════════════════════════════════════════
+
+LANDING SCREEN
+    ↓
+    ├─→ CAPTURE & SCAN
+    │       ↓
+    │       [Pick Image]
+    │       ↓
+    │       [Upload to API]
+    │       ↓
+    │       RESULTS SCREEN ←─┐
+    │       ↓                │
+    │       [Save to Logs]   │
+    │       ↓                │
+    │       Back to Landing  │
+    │                        │
+    ├─→ MANUAL INPUT         │
+    │       ↓                │
+    │       [Type Plate]     │
+    │       ↓                │
+    │       [Query API]      │
+    │       └─→→→→→→→→→→─────┘
+    │
+    └─→ SCAN LOGS
+            ↓
+            [View History]
+            [Statistics]
+            [Manage Logs]
+
+═══════════════════════════════════════════════════════════════════
+
+📊 SCAN LOGS FEATURES
+═══════════════════════════════════════════════════════════════════
+
+LocalStorage (SharedPreferences):
+- Saves each scan with:
+  * Plate number
+  * Scan timestamp
+  * Violation count
+  * Has violations (boolean)
+  * Source (camera or manual)
+
+Statistics Displayed:
+- Total scans
+- Scans with violations
+- Total violations found
+
+Operations:
+- Delete individual logs
+- Clear all logs
+- View scan history with timestamps
+
+═══════════════════════════════════════════════════════════════════
+
+🚀 READY TO BUILD
+═══════════════════════════════════════════════════════════════════
+
+To run:
+  cd car_plate_detector
+  flutter pub get
+  flutter run
+
+To build APK:
+  flutter build apk
+
+To build iOS:
+  flutter build ios
+
+═══════════════════════════════════════════════════════════════════
+
+✨ KEY FEATURES
+═══════════════════════════════════════════════════════════════════
+
+✅ Camera capture with automatic upload
+✅ Gallery picker for existing images
+✅ Manual plate number input
+✅ Real-time violation checking
+✅ Owner information display
+✅ Cropped plate image viewing
+✅ Scan history with timestamps
+✅ Statistics and analytics
+✅ Local data persistence
+✅ Beautiful Material 3 UI
+✅ Dark mode support
+✅ Error handling & loading states
+
+═══════════════════════════════════════════════════════════════════
