@@ -28,7 +28,7 @@
 
 This is an integrated system built by **MIT First Year Students** of **Adamson University (2025-2026)** that combines:
 
-✅ **Computer Vision** - YOLO v8 segmentation for license plate detection  
+✅ **Computer Vision** - YOLO 12 instance segmentation for license plate detection  
 ✅ **OCR Technology** - EasyOCR for plate character recognition  
 ✅ **Database Management** - MySQL with 1000+ violation records  
 ✅ **Mobile Application** - Flutter app for real-time plate scanning  
@@ -50,7 +50,7 @@ This is an integrated system built by **MIT First Year Students** of **Adamson U
                        ▼
 ┌─────────────────────────────────────────────────────────────┐
 │               BACKEND SERVER (FastAPI)                        │
-│        • License Plate Detection (YOLO v8)                   │
+│        • License Plate Detection (YOLO 12)                   │
 │        • Character Recognition (EasyOCR)                     │
 │        • Violation Database Queries                          │
 │        • RESTful API Endpoints                               │
@@ -674,7 +674,7 @@ For issues, questions, or suggestions:
 
 ## 🎉 Acknowledgments
 
-- **YOLO v8** - Ultralytics for object detection
+- **YOLO 12** - Ultralytics instance segmentation for object detection
 - **EasyOCR** - Character recognition
 - **FastAPI** - Modern Python web framework
 - **Flutter** - Cross-platform mobile development
