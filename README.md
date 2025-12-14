@@ -1,6 +1,6 @@
 # 🚗 License Plate Detection & Traffic Violation Management System
 
-[![License](https://img.shields.io/badge/license-PROPRIETARY-red.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Web%20%7C%20Mobile-brightgreen.svg)](README.md)
 [![Status](https://img.shields.io/badge/status-Active-success.svg)](README.md)
 
@@ -628,46 +628,37 @@ Manila Institute of Technology (MIT)
 First Year Computer Science Students  
 AY 2025-2026
 
-### � Copyright & Proprietary Notice
+### 📜 License
 
 ```
-PROPRIETARY SOFTWARE - ALL RIGHTS RESERVED
+MIT License (2025)
 
 Copyright (c) 2025 JOMARI REBADULLA
-MIT First Year Students - Adamson University
-Academic Year: 2025-2026
 
-⚠️ PROPRIETARY AND CONFIDENTIAL
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-This software is the PRIVATE PROPERTY of JOMARI REBADULLA and the
-MIT First Year Student cohort of Adamson University (2025-2026).
-
-🚫 RESTRICTIONS:
-
-✗ This software CANNOT be copied, modified, or distributed
-✗ Unauthorized use is strictly PROHIBITED
-✗ Commercial use without explicit written consent is FORBIDDEN
-✗ Reverse engineering and/or decompiling is NOT ALLOWED
-✗ Any use for personal benefit requires PRIOR WRITTEN CONSENT
-
-✅ PERMITTED ONLY:
-✓ Educational/classroom use at Adamson University
-✓ Use explicitly authorized in writing by JOMARI REBADULLA
-
-📧 For licensing inquiries or permissions:
-   Contact: jomarirebadulla@gmail.com
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
 Date: December 14, 2025
 ```
 
 ---
 
-## 🔒 Contributing & Modifications
+## 🤝 Contributing
 
-⚠️ **This is a PROPRIETARY project.** Contributions and modifications are NOT accepted without explicit written consent from JOMARI REBADULLA.
+To contribute to this project:
 
-To request modifications, licensing, or permissions:
-📧 Email: jomarirebadulla@gmail.com
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
@@ -697,7 +688,7 @@ For issues, questions, or suggestions:
 
 ⭐ If this project helped you, please consider giving it a star!
 
-![License: PROPRIETARY](https://img.shields.io/badge/License-PROPRIETARY-red.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Python: 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Flutter: 3.0+](https://img.shields.io/badge/Flutter-3.0+-green.svg)
 ![Status: Active](https://img.shields.io/badge/Status-Active-brightgreen.svg)
